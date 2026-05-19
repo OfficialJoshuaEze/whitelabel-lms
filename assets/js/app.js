@@ -101,3 +101,94 @@ function initContactFormDemo() {
     form.reset();
   });
 }
+
+// Batch 2 auth UI interactions
+
+document.addEventListener('DOMContentLoaded', () => {
+  initPasswordToggles();
+  initPasswordStrength();
+  initAuthFormDemo();
+  initVerificationInputs();
+});
+
+function initPasswordToggles() {
+  const toggles = document.querySelectorAll('[data-password-toggle]');
+  toggles.forEach((toggle) => {
+    const inputId = toggle.getAttribute('data-password-toggle');
+    const input = document.getElementById(inputId);
+    if (!input) return;
+
+    toggle.addEventListener('click', () => {
+      const isPassword = input.type === 'password';
+      input.type = isPassword ? 'text' : 'password';
+      toggle.textContent = isPassword ? 'Hide' : 'Show';
+    });
+  });
+}
+
+function initPasswordStrength() {
+  const inputs = document.querySelectorAll('[data-password-strength-input]');
+  inputs.forEach((input) => {
+    const targetId = input.getAttribute('data-password-strength-input');
+    const target = document.getElementById(targetId);
+    if (!target) return;
+
+    const label = target.querySelector('[data-strength-text]');
+
+    input.addEventListener('input', () => {
+      const value = input.value;
+      let score = 0;
+      if (value.length >= 8) score++;
+      if (/[A-Z]/.test(value)) score++;
+      if (/[0-9]/.test(value)) score++;
+      if (/[^A-Za-z0-9]/.test(value)) score++;
+
+      target.classList.toggle('show', value.length > 0);
+      target.dataset.strength = String(score);
+
+      const labels = ['Weak', 'Weak', 'Fair', 'Good', 'Strong'];
+      if (label) label.textContent = labels[score];
+    });
+  });
+}
+
+function initAuthFormDemo() {
+  const forms = document.querySelectorAll('[data-auth-form]');
+  forms.forEach((form) => {
+    const message = form.querySelector('[data-auth-message]');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (message) message.classList.add('show');
+    });
+  });
+}
+
+function initVerificationInputs() {
+  const groups = document.querySelectorAll('[data-verify-code]');
+  groups.forEach((group) => {
+    const inputs = Array.from(group.querySelectorAll('input'));
+
+    inputs.forEach((input, index) => {
+      input.addEventListener('input', () => {
+        input.value = input.value.replace(/[^0-9]/g, '').slice(0, 1);
+        if (input.value && inputs[index + 1]) inputs[index + 1].focus();
+      });
+
+      input.addEventListener('keydown', (event) => {
+        if (event.key === 'Backspace' && !input.value && inputs[index - 1]) {
+          inputs[index - 1].focus();
+        }
+      });
+
+      input.addEventListener('paste', (event) => {
+        event.preventDefault();
+        const pasted = (event.clipboardData || window.clipboardData).getData('text').replace(/[^0-9]/g, '').slice(0, inputs.length);
+        pasted.split('').forEach((char, pastedIndex) => {
+          if (inputs[pastedIndex]) inputs[pastedIndex].value = char;
+        });
+        const next = inputs[Math.min(pasted.length, inputs.length - 1)];
+        if (next) next.focus();
+      });
+    });
+  });
+}

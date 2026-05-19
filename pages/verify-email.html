@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Verify email - Onlinetutor LMS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+</head>
+<body class="auth-page">
+  <main class="auth-shell">
+
+    <aside class="auth-showcase">
+      <div>
+        <a href="../index.html" class="logo auth-logo">
+          <span class="logo-mark"><span></span><span></span></span>
+          <span>Onlinetutor.</span>
+        </a>
+
+        <h1>Verify your email and unlock your account</h1>
+        <p>Email verification keeps the LMS secure and ensures every learner has a valid account identity.</p>
+
+        <div class="auth-benefits">
+          <div class="auth-benefit"><span>✓</span><div><strong>Secure access</strong><br />Role-based login for students, instructors and admins.</div></div>
+          <div class="auth-benefit"><span>✓</span><div><strong>White-label ready</strong><br />Built to support custom branding for each client installation.</div></div>
+          <div class="auth-benefit"><span>✓</span><div><strong>Learning focused</strong><br />Simple user flows that help learners get into courses faster.</div></div>
+        </div>
+      </div>
+
+      <div class="auth-preview-card">
+        <div class="auth-preview-top">
+          <div>
+            <strong>Active learning session</strong>
+            <p style="margin: 4px 0 0; font-size: 14px;">82% completion across today’s learners</p>
+          </div>
+          <div class="auth-mini-avatars">
+            <span class="avatar"></span>
+            <span class="avatar orange"></span>
+            <span class="avatar blue"></span>
+          </div>
+        </div>
+        <div class="progress-track"><span class="progress-fill orange" style="width: 82%; display: block;"></span></div>
+      </div>
+    </aside>
+
+
+    <section class="auth-form-area">
+      <div class="auth-card">
+        <a href="login.html" class="auth-top-link">← Back to sign in</a>
+        <h2>Verify email</h2>
+        <p class="auth-intro">Enter the 6-digit verification code sent to your email address.</p>
+
+        <form class="auth-form" data-auth-form>
+          <div class="auth-alert" data-auth-message>Email verification UI confirmed. Code validation will be handled by the backend.</div>
+
+          <div class="verify-code" data-verify-code aria-label="Verification code">
+            <input inputmode="numeric" maxlength="1" aria-label="Code digit 1" required />
+            <input inputmode="numeric" maxlength="1" aria-label="Code digit 2" required />
+            <input inputmode="numeric" maxlength="1" aria-label="Code digit 3" required />
+            <input inputmode="numeric" maxlength="1" aria-label="Code digit 4" required />
+            <input inputmode="numeric" maxlength="1" aria-label="Code digit 5" required />
+            <input inputmode="numeric" maxlength="1" aria-label="Code digit 6" required />
+          </div>
+
+          <button class="btn btn-primary btn-block" type="submit">Verify account</button>
+        </form>
+
+        <div class="auth-small-actions">
+          <span>Didn’t receive the code?</span>
+          <a href="#" class="auth-link">Resend code</a>
+        </div>
+        <div class="auth-note">For the backend phase, codes should expire and be rate-limited for security.</div>
+      </div>
+    </section>
+  </main>
+
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>
