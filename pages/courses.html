@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Courses - Onlinetutor LMS</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: {
+              DEFAULT: '#7C3AED',
+              dark: '#5B21B6',
+              soft: '#EDE9FE'
+            },
+            accent: {
+              DEFAULT: '#F97316',
+              dark: '#EA580C',
+              soft: '#FFEDD5'
+            },
+            ink: '#17231B',
+            body: '#5F6472',
+            muted: '#9CA3AF',
+            softbg: '#F8F7FC',
+            surface: '#FFFFFF',
+            borderSoft: '#E7E3F5'
+          },
+          fontFamily: {
+            heading: ['Playfair Display', 'serif'],
+            body: ['Inter', 'sans-serif']
+          },
+          boxShadow: {
+            soft: '0 20px 50px rgba(39, 23, 80, 0.06)',
+            card: '0 16px 40px rgba(39, 23, 80, 0.08)'
+          },
+          borderRadius: {
+            card: '22px',
+            pill: '999px'
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #F8F7FC;
+      color: #5F6472;
+    }
+
+    .heading-font {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .text-gradient {
+      background: linear-gradient(90deg, #7C3AED 0%, #F97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .course-card.hide {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-softbg text-body">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white/85 backdrop-blur-md border-b border-borderSoft">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+
+        <a href="../index.html" class="flex items-center gap-3">
+          <div class="flex items-center gap-1">
+            <span class="w-5 h-5 rounded-full bg-primary/90 block"></span>
+            <span class="w-5 h-5 rounded-full bg-primary/40 block -ml-2"></span>
+          </div>
+          <span class="text-xl font-extrabold text-ink">Onlinetutor.</span>
+        </a>
+
+        <nav class="hidden lg:flex items-center gap-8 text-sm font-medium text-body">
+          <a href="../index.html" class="hover:text-primary transition">Home</a>
+          <a href="courses.html" class="text-primary font-semibold">Courses</a>
+          <a href="#" class="hover:text-primary transition">Instructors</a>
+          <a href="#" class="hover:text-primary transition">Pricing</a>
+          <a href="#" class="hover:text-primary transition">Contact</a>
+        </nav>
+
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="login.html" class="text-sm font-semibold text-ink hover:text-primary transition">Sign in</a>
+          <a href="register.html" class="inline-flex items-center justify-center rounded-pill bg-primary px-6 py-3 text-white text-sm font-semibold shadow-soft hover:bg-primary-dark transition">
+            Get Started
+          </a>
+        </div>
+
+        <button id="menuToggle" class="lg:hidden inline-flex items-center justify-center rounded-xl border border-borderSoft bg-white p-3 text-ink">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="mobileMenu" class="hidden lg:hidden pb-5">
+        <div class="rounded-card border border-borderSoft bg-white p-4 shadow-soft space-y-3">
+          <a href="../index.html" class="block py-2 font-medium hover:text-primary">Home</a>
+          <a href="courses.html" class="block py-2 font-semibold text-primary">Courses</a>
+          <a href="#" class="block py-2 font-medium hover:text-primary">Instructors</a>
+          <a href="#" class="block py-2 font-medium hover:text-primary">Pricing</a>
+          <a href="#" class="block py-2 font-medium hover:text-primary">Contact</a>
+
+          <div class="pt-3 flex flex-col gap-3">
+            <a href="login.html" class="inline-flex justify-center rounded-pill border border-borderSoft px-5 py-3 font-semibold text-ink">Sign in</a>
+            <a href="register.html" class="inline-flex justify-center rounded-pill bg-primary px-5 py-3 font-semibold text-white">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="py-14 lg:py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <div class="rounded-[34px] bg-white border border-borderSoft shadow-soft px-6 py-10 sm:px-10 lg:px-14 lg:py-14">
+        <div class="grid lg:grid-cols-2 gap-10 items-center">
+
+          <div>
+            <p class="inline-flex items-center rounded-pill bg-primary-soft text-primary px-4 py-2 text-sm font-semibold mb-6">
+              Explore our course library
+            </p>
+
+            <h1 class="heading-font text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-tight text-ink">
+              Find the right course to build your
+              <span class="text-gradient">next skill</span>
+            </h1>
+
+            <p class="mt-6 max-w-2xl text-base sm:text-lg leading-8 text-body">
+              Browse practical courses designed for students, creators, professionals and institutions.
+              Learn at your pace, track your progress and earn certificates.
+            </p>
+          </div>
+
+          <div class="rounded-[28px] bg-softbg border border-borderSoft p-6">
+            <div class="grid grid-cols-2 gap-4">
+              <div class="rounded-3xl bg-white p-5 shadow-soft">
+                <p class="text-sm text-body">Courses</p>
+                <h3 class="text-3xl font-bold text-ink mt-2">250+</h3>
+              </div>
+
+              <div class="rounded-3xl bg-white p-5 shadow-soft">
+                <p class="text-sm text-body">Students</p>
+                <h3 class="text-3xl font-bold text-ink mt-2">12k+</h3>
+              </div>
+
+              <div class="rounded-3xl bg-white p-5 shadow-soft col-span-2">
+                <p class="text-sm text-body">Average Completion</p>
+                <h3 class="text-3xl font-bold text-ink mt-2">82%</h3>
+                <div class="mt-4 h-3 rounded-full bg-softbg overflow-hidden">
+                  <div class="h-full w-[82%] rounded-full bg-primary"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Courses -->
+  <section class="pb-16 lg:pb-24">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <!-- Filters -->
+      <div class="rounded-card bg-white border border-borderSoft shadow-soft p-5 lg:p-6 mb-10">
+        <div class="grid lg:grid-cols-12 gap-4 items-center">
+
+          <div class="lg:col-span-5">
+            <label for="searchInput" class="sr-only">Search courses</label>
+            <input
+              id="searchInput"
+              type="text"
+              placeholder="Search for a course..."
+              class="w-full rounded-pill border border-borderSoft bg-softbg px-5 py-4 outline-none focus:border-primary"
+            />
+          </div>
+
+          <div class="lg:col-span-3">
+            <label for="categoryFilter" class="sr-only">Category</label>
+            <select
+              id="categoryFilter"
+              class="w-full rounded-pill border border-borderSoft bg-softbg px-5 py-4 outline-none focus:border-primary"
+            >
+              <option value="all">All Categories</option>
+              <option value="design">Design</option>
+              <option value="programming">Programming</option>
+              <option value="leadership">Leadership</option>
+              <option value="marketing">Marketing</option>
+              <option value="language">Language</option>
+            </select>
+          </div>
+
+          <div class="lg:col-span-3">
+            <label for="levelFilter" class="sr-only">Level</label>
+            <select
+              id="levelFilter"
+              class="w-full rounded-pill border border-borderSoft bg-softbg px-5 py-4 outline-none focus:border-primary"
+            >
+              <option value="all">All Levels</option>
+              <option value="beginner">Beginner</option>
+              <option value="intermediate">Intermediate</option>
+              <option value="advanced">Advanced</option>
+            </select>
+          </div>
+
+          <div class="lg:col-span-1">
+            <button
+              id="resetFilters"
+              class="w-full rounded-pill bg-primary text-white px-5 py-4 font-semibold hover:bg-primary-dark transition"
+            >
+              Reset
+            </button>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Result Count -->
+      <div class="flex items-center justify-between gap-4 mb-8">
+        <div>
+          <h2 class="heading-font text-3xl font-bold text-ink">Available Courses</h2>
+          <p id="resultCount" class="mt-2 text-sm text-body">Showing all courses</p>
+        </div>
+
+        <div class="hidden sm:block text-sm text-body">
+          Sort by: <span class="font-semibold text-ink">Most Popular</span>
+        </div>
+      </div>
+
+      <!-- Course Grid -->
+      <div id="courseGrid" class="grid sm:grid-cols-2 xl:grid-cols-3 gap-8">
+
+        <!-- Card 1 -->
+        <article class="course-card rounded-card overflow-hidden border border-borderSoft bg-white shadow-soft hover:-translate-y-1 transition"
+          data-title="machine learning regression classification"
+          data-category="programming"
+          data-level="advanced">
+          <div class="h-52 bg-gradient-to-br from-sky-200 via-cyan-300 to-indigo-500"></div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between text-sm mb-4">
+              <span class="inline-flex items-center gap-2 text-body">
+                <span class="w-2.5 h-2.5 rounded-full bg-green-500"></span>
+                25 Lessons
+              </span>
+              <span class="text-amber-400">★★★★★</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-ink leading-snug">
+              Supervised Machine Learning: Regression and Classification
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-body">
+              Learn core machine learning concepts with practical examples and guided projects.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between">
+              <span class="rounded-pill bg-blue-100 text-blue-700 px-3 py-1 text-xs font-semibold">Programming</span>
+              <span class="text-sm font-semibold text-ink">Advanced</span>
+            </div>
+
+            <a href="course-details.html" class="mt-6 inline-flex w-full justify-center rounded-pill bg-primary px-5 py-3 text-white font-semibold hover:bg-primary-dark transition">
+              View Course
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="course-card rounded-card overflow-hidden border border-borderSoft bg-white shadow-soft hover:-translate-y-1 transition"
+          data-title="python programming everybody beginner"
+          data-category="programming"
+          data-level="beginner">
+          <div class="h-52 bg-gradient-to-br from-violet-100 via-indigo-100 to-slate-200"></div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between text-sm mb-4">
+              <span class="inline-flex items-center gap-2 text-body">
+                <span class="w-2.5 h-2.5 rounded-full bg-sky-500"></span>
+                16 Lessons
+              </span>
+              <span class="text-amber-400">★★★★★</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-ink leading-snug">
+              Programming for Everybody: Getting Started with Python
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-body">
+              Start coding from scratch with Python and understand the basics of software development.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between">
+              <span class="rounded-pill bg-blue-100 text-blue-700 px-3 py-1 text-xs font-semibold">Programming</span>
+              <span class="text-sm font-semibold text-ink">Beginner</span>
+            </div>
+
+            <a href="course-details.html" class="mt-6 inline-flex w-full justify-center rounded-pill bg-primary px-5 py-3 text-white font-semibold hover:bg-primary-dark transition">
+              View Course
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="course-card rounded-card overflow-hidden border border-borderSoft bg-white shadow-soft hover:-translate-y-1 transition"
+          data-title="leading teams developing leader"
+          data-category="leadership"
+          data-level="intermediate">
+          <div class="h-52 bg-gradient-to-br from-violet-300 via-purple-400 to-indigo-500"></div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between text-sm mb-4">
+              <span class="inline-flex items-center gap-2 text-body">
+                <span class="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
+                38 Lessons
+              </span>
+              <span class="text-amber-400">★★★★★</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-ink leading-snug">
+              Leading Teams: Developing as a Modern Leader
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-body">
+              Build leadership confidence, manage people well and lead high-performing teams.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between">
+              <span class="rounded-pill bg-pink-100 text-pink-700 px-3 py-1 text-xs font-semibold">Leadership</span>
+              <span class="text-sm font-semibold text-ink">Intermediate</span>
+            </div>
+
+            <a href="course-details.html" class="mt-6 inline-flex w-full justify-center rounded-pill bg-primary px-5 py-3 text-white font-semibold hover:bg-primary-dark transition">
+              View Course
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="course-card rounded-card overflow-hidden border border-borderSoft bg-white shadow-soft hover:-translate-y-1 transition"
+          data-title="ui ux design product design interface"
+          data-category="design"
+          data-level="beginner">
+          <div class="h-52 bg-gradient-to-br from-pink-200 via-violet-200 to-sky-200"></div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between text-sm mb-4">
+              <span class="inline-flex items-center gap-2 text-body">
+                <span class="w-2.5 h-2.5 rounded-full bg-violet-500"></span>
+                30 Lessons
+              </span>
+              <span class="text-amber-400">★★★★★</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-ink leading-snug">
+              UI/UX Design Fundamentals for Digital Products
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-body">
+              Learn how to design clean, useful and beautiful interfaces for web and mobile apps.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between">
+              <span class="rounded-pill bg-emerald-100 text-emerald-700 px-3 py-1 text-xs font-semibold">Design</span>
+              <span class="text-sm font-semibold text-ink">Beginner</span>
+            </div>
+
+            <a href="course-details.html" class="mt-6 inline-flex w-full justify-center rounded-pill bg-primary px-5 py-3 text-white font-semibold hover:bg-primary-dark transition">
+              View Course
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="course-card rounded-card overflow-hidden border border-borderSoft bg-white shadow-soft hover:-translate-y-1 transition"
+          data-title="digital marketing growth social media"
+          data-category="marketing"
+          data-level="intermediate">
+          <div class="h-52 bg-gradient-to-br from-orange-100 via-rose-100 to-purple-200"></div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between text-sm mb-4">
+              <span class="inline-flex items-center gap-2 text-body">
+                <span class="w-2.5 h-2.5 rounded-full bg-orange-500"></span>
+                42 Lessons
+              </span>
+              <span class="text-amber-400">★★★★★</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-ink leading-snug">
+              Digital Marketing and Growth Strategy
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-body">
+              Understand content, ads, funnels and growth systems for online businesses.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between">
+              <span class="rounded-pill bg-orange-100 text-orange-700 px-3 py-1 text-xs font-semibold">Marketing</span>
+              <span class="text-sm font-semibold text-ink">Intermediate</span>
+            </div>
+
+            <a href="course-details.html" class="mt-6 inline-flex w-full justify-center rounded-pill bg-primary px-5 py-3 text-white font-semibold hover:bg-primary-dark transition">
+              View Course
+            </a>
+          </div>
+        </article>
+
+        <!-- Card 6 -->
+        <article class="course-card rounded-card overflow-hidden border border-borderSoft bg-white shadow-soft hover:-translate-y-1 transition"
+          data-title="english language communication speaking"
+          data-category="language"
+          data-level="beginner">
+          <div class="h-52 bg-gradient-to-br from-pink-100 via-rose-100 to-orange-100"></div>
+
+          <div class="p-6">
+            <div class="flex items-center justify-between text-sm mb-4">
+              <span class="inline-flex items-center gap-2 text-body">
+                <span class="w-2.5 h-2.5 rounded-full bg-blue-500"></span>
+                92 Lessons
+              </span>
+              <span class="text-amber-400">★★★★★</span>
+            </div>
+
+            <h3 class="text-xl font-bold text-ink leading-snug">
+              Improve Your English Communication Skills
+            </h3>
+
+            <p class="mt-3 text-sm leading-6 text-body">
+              Speak, write and communicate more clearly in academic and professional settings.
+            </p>
+
+            <div class="mt-5 flex items-center justify-between">
+              <span class="rounded-pill bg-indigo-100 text-indigo-700 px-3 py-1 text-xs font-semibold">Language</span>
+              <span class="text-sm font-semibold text-ink">Beginner</span>
+            </div>
+
+            <a href="course-details.html" class="mt-6 inline-flex w-full justify-center rounded-pill bg-primary px-5 py-3 text-white font-semibold hover:bg-primary-dark transition">
+              View Course
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Empty State -->
+      <div id="emptyState" class="hidden rounded-card bg-white border border-borderSoft shadow-soft p-10 text-center mt-8">
+        <h3 class="text-2xl font-bold text-ink">No course found</h3>
+        <p class="mt-3 text-body">Try changing your search keyword, category or level filter.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-borderSoft bg-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-sm text-body">© 2026 Onlinetutor. All rights reserved.</p>
+
+        <div class="flex items-center gap-5 text-sm text-body">
+          <a href="#" class="hover:text-primary">Privacy Policy</a>
+          <a href="#" class="hover:text-primary">Terms</a>
+          <a href="#" class="hover:text-primary">Help Center</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuToggle = document.getElementById('menuToggle');
+    const mobileMenu = document.getElementById('mobileMenu');
+
+    menuToggle.addEventListener('click', function () {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    const searchInput = document.getElementById('searchInput');
+    const categoryFilter = document.getElementById('categoryFilter');
+    const levelFilter = document.getElementById('levelFilter');
+    const resetFilters = document.getElementById('resetFilters');
+    const courseCards = document.querySelectorAll('.course-card');
+    const resultCount = document.getElementById('resultCount');
+    const emptyState = document.getElementById('emptyState');
+
+    function filterCourses() {
+      const searchValue = searchInput.value.toLowerCase().trim();
+      const categoryValue = categoryFilter.value;
+      const levelValue = levelFilter.value;
+
+      let visibleCount = 0;
+
+      courseCards.forEach(card => {
+        const title = card.dataset.title;
+        const category = card.dataset.category;
+        const level = card.dataset.level;
+
+        const matchesSearch = title.includes(searchValue);
+        const matchesCategory = categoryValue === 'all' || category === categoryValue;
+        const matchesLevel = levelValue === 'all' || level === levelValue;
+
+        if (matchesSearch && matchesCategory && matchesLevel) {
+          card.classList.remove('hide');
+          visibleCount++;
+        } else {
+          card.classList.add('hide');
+        }
+      });
+
+      resultCount.textContent = visibleCount === courseCards.length
+        ? 'Showing all courses'
+        : `Showing ${visibleCount} course${visibleCount === 1 ? '' : 's'}`;
+
+      emptyState.classList.toggle('hidden', visibleCount !== 0);
+    }
+
+    searchInput.addEventListener('input', filterCourses);
+    categoryFilter.addEventListener('change', filterCourses);
+    levelFilter.addEventListener('change', filterCourses);
+
+    resetFilters.addEventListener('click', function () {
+      searchInput.value = '';
+      categoryFilter.value = 'all';
+      levelFilter.value = 'all';
+      filterCourses();
+    });
+  </script>
+
+</body>
+</html>
