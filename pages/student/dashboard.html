@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <title>Dashboard - Student Dashboard</title>
+</head>
+<body class="dashboard-body">
+  <div class="overlay-backdrop" data-dashboard-backdrop></div>
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="studentSidebar">
+      <a class="logo" href="../../index.html" aria-label="Onlinetutor home">
+        <span class="logo-mark"><span></span><span></span></span>
+        <span>Onlinetutor.</span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <div class="sidebar-section-label">Student Menu</div>
+        <a href="dashboard.html" class="active"><span class="nav-icon">🏠</span><span>Dashboard</span></a>
+<a href="my-courses.html" class=""><span class="nav-icon">📚</span><span>My Courses</span></a>
+<a href="lesson-player.html" class=""><span class="nav-icon">▶️</span><span>Lesson Player</span></a>
+<a href="assignments.html" class=""><span class="nav-icon">📝</span><span>Assignments</span></a>
+<a href="certificates.html" class=""><span class="nav-icon">🏅</span><span>Certificates</span></a>
+<a href="profile.html" class=""><span class="nav-icon">👤</span><span>Profile</span></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Weekly goal</strong>
+        <p>You have completed 68% of your learning target this week.</p>
+        <div class="sidebar-progress"><span style="width:68%"></span></div>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="dashboard-menu-btn" type="button" data-dashboard-toggle="studentSidebar" aria-label="Open student menu">☰</button>
+        <div class="dashboard-search"><span>⌕</span><input type="search" placeholder="Search lessons, courses or assignments..." /></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <a class="icon-btn" href="../../pages/courses.html" aria-label="Browse courses">＋</a>
+          <a class="user-pill" href="profile.html">
+            <span class="avatar">JE</span>
+            <div><strong class="text-ink">Joshua Eze</strong><br><small>Student</small></div>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        
+<section class="dashboard-welcome">
+  <div class="welcome-card">
+    <span class="eyebrow">Student dashboard</span>
+    <h1>Welcome back, Joshua. Continue building your next skill.</h1>
+    <p>Your learning progress is looking strong. Complete one more lesson today to keep your weekly streak alive.</p>
+    <div class="quick-actions">
+      <a class="btn btn-primary" href="lesson-player.html">Continue Learning</a>
+      <a class="btn btn-ghost" href="my-courses.html">View My Courses</a>
+    </div>
+  </div>
+  <aside class="dashboard-card focus-card">
+    <span class="eyebrow" style="background:rgba(255,255,255,.16);color:#fff">Today’s focus</span>
+    <h2 class="heading-font" style="font-size:32px;margin:0">Python Functions</h2>
+    <p>22 minutes left in your current lesson.</p>
+    <a class="btn" href="lesson-player.html">Resume Lesson</a>
+  </aside>
+</section>
+
+<section class="stat-grid">
+  <div class="stat-card"><p>Enrolled Courses</p><strong>08</strong><span>+2 this month</span></div>
+  <div class="stat-card"><p>Completed Lessons</p><strong>124</strong><span>68% weekly goal</span></div>
+  <div class="stat-card"><p>Certificates</p><strong>03</strong><span>1 pending</span></div>
+  <div class="stat-card"><p>Learning Streak</p><strong>12</strong><span>days active</span></div>
+</section>
+
+<section class="dashboard-grid">
+  <div>
+    <div class="dashboard-section-title">
+      <h2>Continue Learning</h2>
+      <a class="text-primary" href="my-courses.html">See all</a>
+    </div>
+    
+<div class="course-progress-list">
+  <article class="progress-course-card">
+    <div class="course-thumb code"></div>
+    <div>
+      <h3 class="course-title-sm">Programming for Everybody: Python Basics</h3>
+      <div class="course-card-meta"><span>Next: Functions & Loops</span><span>16 lessons</span></div>
+      <div class="progress-line"><span style="width:74%"></span></div>
+    </div>
+    <div class="progress-percent">74%</div>
+  </article>
+  <article class="progress-course-card">
+    <div class="course-thumb design"></div>
+    <div>
+      <h3 class="course-title-sm">UI/UX Design Fundamentals for Digital Products</h3>
+      <div class="course-card-meta"><span>Next: Wireframes</span><span>30 lessons</span></div>
+      <div class="progress-line"><span style="width:48%"></span></div>
+    </div>
+    <div class="progress-percent">48%</div>
+  </article>
+  <article class="progress-course-card">
+    <div class="course-thumb lead"></div>
+    <div>
+      <h3 class="course-title-sm">Leading Teams as a Modern Leader</h3>
+      <div class="course-card-meta"><span>Next: Decision Making</span><span>38 lessons</span></div>
+      <div class="progress-line"><span style="width:89%"></span></div>
+    </div>
+    <div class="progress-percent">89%</div>
+  </article>
+</div>
+
+  </div>
+
+  <aside class="dashboard-card calendar-card">
+    <div class="dashboard-section-title"><h2>Schedule</h2></div>
+    <p class="text-muted">May 2026</p>
+    <div class="calendar-grid">
+      <span class="day">M</span><span class="day">T</span><span class="day">W</span><span class="day">T</span><span class="day">F</span><span class="day">S</span><span class="day">S</span>
+      <span>11</span><span>12</span><span class="soft">13</span><span>14</span><span class="active">15</span><span>16</span><span>17</span>
+    </div>
+    <div class="notification-list" style="margin-top:22px">
+      <div class="notification-item"><span class="activity-dot">▶</span><div><strong class="text-ink">Live class</strong><br><small>UI/UX review by 6:00 PM</small></div></div>
+      <div class="notification-item"><span class="activity-dot">✓</span><div><strong class="text-ink">Quiz due</strong><br><small>Python basics quiz closes today</small></div></div>
+    </div>
+  </aside>
+</section>
+
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

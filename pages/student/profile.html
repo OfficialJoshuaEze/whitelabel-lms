@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <title>Profile - Student Dashboard</title>
+</head>
+<body class="dashboard-body">
+  <div class="overlay-backdrop" data-dashboard-backdrop></div>
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="studentSidebar">
+      <a class="logo" href="../../index.html" aria-label="Onlinetutor home">
+        <span class="logo-mark"><span></span><span></span></span>
+        <span>Onlinetutor.</span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <div class="sidebar-section-label">Student Menu</div>
+        <a href="dashboard.html" class=""><span class="nav-icon">🏠</span><span>Dashboard</span></a>
+<a href="my-courses.html" class=""><span class="nav-icon">📚</span><span>My Courses</span></a>
+<a href="lesson-player.html" class=""><span class="nav-icon">▶️</span><span>Lesson Player</span></a>
+<a href="assignments.html" class=""><span class="nav-icon">📝</span><span>Assignments</span></a>
+<a href="certificates.html" class=""><span class="nav-icon">🏅</span><span>Certificates</span></a>
+<a href="profile.html" class="active"><span class="nav-icon">👤</span><span>Profile</span></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Weekly goal</strong>
+        <p>You have completed 68% of your learning target this week.</p>
+        <div class="sidebar-progress"><span style="width:68%"></span></div>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="dashboard-menu-btn" type="button" data-dashboard-toggle="studentSidebar" aria-label="Open student menu">☰</button>
+        <div class="dashboard-search"><span>⌕</span><input type="search" placeholder="Search lessons, courses or assignments..." /></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <a class="icon-btn" href="../../pages/courses.html" aria-label="Browse courses">＋</a>
+          <a class="user-pill" href="profile.html">
+            <span class="avatar">JE</span>
+            <div><strong class="text-ink">Joshua Eze</strong><br><small>Student</small></div>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        
+<section class="page-heading">
+  <div>
+    <span class="eyebrow">Account settings</span>
+    <h1>Profile</h1>
+    <p>Manage your learning profile, personal information and notification preferences.</p>
+  </div>
+</section>
+
+<section class="profile-layout">
+  <aside class="profile-summary">
+    <span class="avatar lg">JE</span>
+    <h2 class="text-ink">Joshua Eze</h2>
+    <p>Student • Lagos, Nigeria</p>
+    <div class="progress-line"><span style="width:68%"></span></div>
+    <p><strong class="text-ink">68%</strong> weekly learning goal completed</p>
+  </aside>
+
+  <form class="profile-panel" data-student-form>
+    <div class="dashboard-section-title"><h2>Personal Information</h2></div>
+    <div class="profile-form-grid">
+      <div class="form-group"><label>Full Name</label><input type="text" value="Joshua Eze" /></div>
+      <div class="form-group"><label>Email Address</label><input type="email" value="joshua@example.com" /></div>
+      <div class="form-group"><label>Phone Number</label><input type="tel" value="+234 000 000 0000" /></div>
+      <div class="form-group"><label>Country</label><select><option>Nigeria</option><option>Ghana</option><option>Kenya</option><option>United Kingdom</option></select></div>
+      <div class="form-group full"><label>Bio</label><textarea>Learning software development, business systems and product design.</textarea></div>
+    </div>
+    <div class="quick-actions"><button class="btn btn-primary" type="submit">Save Changes</button><button class="btn btn-ghost" type="button">Cancel</button></div>
+    <div class="form-message-inline" data-student-form-message>Profile changes saved successfully.</div>
+  </form>
+</section>
+
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <title>Assignments - Student Dashboard</title>
+</head>
+<body class="dashboard-body">
+  <div class="overlay-backdrop" data-dashboard-backdrop></div>
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="studentSidebar">
+      <a class="logo" href="../../index.html" aria-label="Onlinetutor home">
+        <span class="logo-mark"><span></span><span></span></span>
+        <span>Onlinetutor.</span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <div class="sidebar-section-label">Student Menu</div>
+        <a href="dashboard.html" class=""><span class="nav-icon">🏠</span><span>Dashboard</span></a>
+<a href="my-courses.html" class=""><span class="nav-icon">📚</span><span>My Courses</span></a>
+<a href="lesson-player.html" class=""><span class="nav-icon">▶️</span><span>Lesson Player</span></a>
+<a href="assignments.html" class="active"><span class="nav-icon">📝</span><span>Assignments</span></a>
+<a href="certificates.html" class=""><span class="nav-icon">🏅</span><span>Certificates</span></a>
+<a href="profile.html" class=""><span class="nav-icon">👤</span><span>Profile</span></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Weekly goal</strong>
+        <p>You have completed 68% of your learning target this week.</p>
+        <div class="sidebar-progress"><span style="width:68%"></span></div>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="dashboard-menu-btn" type="button" data-dashboard-toggle="studentSidebar" aria-label="Open student menu">☰</button>
+        <div class="dashboard-search"><span>⌕</span><input type="search" placeholder="Search lessons, courses or assignments..." /></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <a class="icon-btn" href="../../pages/courses.html" aria-label="Browse courses">＋</a>
+          <a class="user-pill" href="profile.html">
+            <span class="avatar">JE</span>
+            <div><strong class="text-ink">Joshua Eze</strong><br><small>Student</small></div>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        
+<section class="page-heading">
+  <div>
+    <span class="eyebrow">Tasks and submissions</span>
+    <h1>Assignments</h1>
+    <p>Manage pending assignments, submitted work and graded activities.</p>
+  </div>
+  <a class="btn btn-primary" href="lesson-player.html">Continue Learning</a>
+</section>
+
+<section class="assignment-list">
+  <article class="assignment-item">
+    <div>
+      <h3 class="course-title-sm">Python Basics Quiz</h3>
+      <p>Complete the quiz covering variables, loops and functions.</p>
+      <div class="assignment-meta"><span class="status-badge orange">Due Today</span><span class="status-badge">20 Questions</span><span class="status-badge">Python Basics</span></div>
+    </div>
+    <a class="btn btn-primary" href="#">Start Quiz</a>
+  </article>
+  <article class="assignment-item">
+    <div>
+      <h3 class="course-title-sm">UI Wireframe Submission</h3>
+      <p>Upload a low-fidelity wireframe for a course detail page.</p>
+      <div class="assignment-meta"><span class="status-badge">Due in 3 days</span><span class="status-badge orange">Upload Required</span></div>
+    </div>
+    <a class="btn btn-ghost" href="#">Submit Work</a>
+  </article>
+  <article class="assignment-item">
+    <div>
+      <h3 class="course-title-sm">Leadership Reflection Note</h3>
+      <p>Write a short reflection on decision-making and team communication.</p>
+      <div class="assignment-meta"><span class="status-badge green">Graded</span><span class="status-badge">Score: 92%</span></div>
+    </div>
+    <a class="btn btn-soft" href="#">View Feedback</a>
+  </article>
+</section>
+
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <title>Lesson Player - Student Dashboard</title>
+</head>
+<body class="dashboard-body">
+  <div class="overlay-backdrop" data-dashboard-backdrop></div>
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="studentSidebar">
+      <a class="logo" href="../../index.html" aria-label="Onlinetutor home">
+        <span class="logo-mark"><span></span><span></span></span>
+        <span>Onlinetutor.</span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <div class="sidebar-section-label">Student Menu</div>
+        <a href="dashboard.html" class=""><span class="nav-icon">🏠</span><span>Dashboard</span></a>
+<a href="my-courses.html" class=""><span class="nav-icon">📚</span><span>My Courses</span></a>
+<a href="lesson-player.html" class="active"><span class="nav-icon">▶️</span><span>Lesson Player</span></a>
+<a href="assignments.html" class=""><span class="nav-icon">📝</span><span>Assignments</span></a>
+<a href="certificates.html" class=""><span class="nav-icon">🏅</span><span>Certificates</span></a>
+<a href="profile.html" class=""><span class="nav-icon">👤</span><span>Profile</span></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Weekly goal</strong>
+        <p>You have completed 68% of your learning target this week.</p>
+        <div class="sidebar-progress"><span style="width:68%"></span></div>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="dashboard-menu-btn" type="button" data-dashboard-toggle="studentSidebar" aria-label="Open student menu">☰</button>
+        <div class="dashboard-search"><span>⌕</span><input type="search" placeholder="Search lessons, courses or assignments..." /></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <a class="icon-btn" href="../../pages/courses.html" aria-label="Browse courses">＋</a>
+          <a class="user-pill" href="profile.html">
+            <span class="avatar">JE</span>
+            <div><strong class="text-ink">Joshua Eze</strong><br><small>Student</small></div>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        
+<section class="page-heading">
+  <div>
+    <span class="eyebrow">Lesson player</span>
+    <h1>Python Functions & Loops</h1>
+    <p>Continue your current lesson and mark it complete when you are done.</p>
+  </div>
+  <a class="btn btn-ghost" href="my-courses.html">Back to Courses</a>
+</section>
+
+<section class="lesson-layout">
+  <div>
+    <div class="video-player-card"><button class="play-button" type="button" aria-label="Play lesson">▶</button></div>
+    <article class="dashboard-card lesson-title-card">
+      <h1>Understanding functions and reusable logic</h1>
+      <p>This lesson explains how functions help you organize code, avoid repetition and build cleaner programmes.</p>
+      <div class="lesson-actions">
+        <button class="btn btn-primary" type="button">Mark as Complete</button>
+        <button class="btn btn-ghost" type="button">Download Resources</button>
+        <button class="btn btn-soft" type="button">Ask Instructor</button>
+      </div>
+    </article>
+  </div>
+
+  <aside class="curriculum-sidebar">
+    <div class="dashboard-section-title"><h2>Course Lessons</h2></div>
+    <div class="curriculum-list">
+      <a class="lesson-row" href="#"><span class="lesson-status">✓</span><div><strong>Welcome to Python</strong><br><small>8 min</small></div></a>
+      <a class="lesson-row" href="#"><span class="lesson-status">✓</span><div><strong>Variables & Data Types</strong><br><small>18 min</small></div></a>
+      <a class="lesson-row active" href="#"><span class="lesson-status">▶</span><div><strong>Functions & Loops</strong><br><small>22 min</small></div></a>
+      <a class="lesson-row" href="#"><span class="lesson-status">4</span><div><strong>Lists and Dictionaries</strong><br><small>27 min</small></div></a>
+      <a class="lesson-row" href="#"><span class="lesson-status">5</span><div><strong>Mini Project</strong><br><small>35 min</small></div></a>
+    </div>
+  </aside>
+</section>
+
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

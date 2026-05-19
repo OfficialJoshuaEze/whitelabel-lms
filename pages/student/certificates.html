@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <title>Certificates - Student Dashboard</title>
+</head>
+<body class="dashboard-body">
+  <div class="overlay-backdrop" data-dashboard-backdrop></div>
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="studentSidebar">
+      <a class="logo" href="../../index.html" aria-label="Onlinetutor home">
+        <span class="logo-mark"><span></span><span></span></span>
+        <span>Onlinetutor.</span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Student navigation">
+        <div class="sidebar-section-label">Student Menu</div>
+        <a href="dashboard.html" class=""><span class="nav-icon">🏠</span><span>Dashboard</span></a>
+<a href="my-courses.html" class=""><span class="nav-icon">📚</span><span>My Courses</span></a>
+<a href="lesson-player.html" class=""><span class="nav-icon">▶️</span><span>Lesson Player</span></a>
+<a href="assignments.html" class=""><span class="nav-icon">📝</span><span>Assignments</span></a>
+<a href="certificates.html" class="active"><span class="nav-icon">🏅</span><span>Certificates</span></a>
+<a href="profile.html" class=""><span class="nav-icon">👤</span><span>Profile</span></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Weekly goal</strong>
+        <p>You have completed 68% of your learning target this week.</p>
+        <div class="sidebar-progress"><span style="width:68%"></span></div>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="dashboard-menu-btn" type="button" data-dashboard-toggle="studentSidebar" aria-label="Open student menu">☰</button>
+        <div class="dashboard-search"><span>⌕</span><input type="search" placeholder="Search lessons, courses or assignments..." /></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <a class="icon-btn" href="../../pages/courses.html" aria-label="Browse courses">＋</a>
+          <a class="user-pill" href="profile.html">
+            <span class="avatar">JE</span>
+            <div><strong class="text-ink">Joshua Eze</strong><br><small>Student</small></div>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        
+<section class="page-heading">
+  <div>
+    <span class="eyebrow">Achievements</span>
+    <h1>Certificates</h1>
+    <p>View, download and share the certificates you have earned.</p>
+  </div>
+  <a class="btn btn-primary" href="my-courses.html">Complete More Courses</a>
+</section>
+
+<section class="certificate-grid">
+  <article class="certificate-card">
+    <div class="certificate-seal">✓</div>
+    <h3>Digital Marketing and Growth Strategy</h3>
+    <p>Awarded to Joshua Eze for completing the course with all required assessments.</p>
+    <div class="quick-actions"><a class="btn btn-primary" href="#">Download</a><a class="btn btn-ghost" href="#">Share</a></div>
+  </article>
+  <article class="certificate-card">
+    <div class="certificate-seal">✓</div>
+    <h3>Computer Fundamentals</h3>
+    <p>Awarded for completing foundation modules in digital literacy and productivity tools.</p>
+    <div class="quick-actions"><a class="btn btn-primary" href="#">Download</a><a class="btn btn-ghost" href="#">Share</a></div>
+  </article>
+  <article class="certificate-card">
+    <div class="certificate-seal">✓</div>
+    <h3>Introduction to Web Design</h3>
+    <p>Awarded after completing lessons, assignments and the final design project.</p>
+    <div class="quick-actions"><a class="btn btn-primary" href="#">Download</a><a class="btn btn-ghost" href="#">Share</a></div>
+  </article>
+  <article class="certificate-card">
+    <div class="certificate-seal">…</div>
+    <h3>Python Basics</h3>
+    <p>Complete the final quiz to unlock this certificate.</p>
+    <div class="quick-actions"><a class="btn btn-soft" href="lesson-player.html">Continue Course</a></div>
+  </article>
+</section>
+
+      </main>
+    </div>
+  </div>
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

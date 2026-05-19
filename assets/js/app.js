@@ -192,3 +192,63 @@ function initVerificationInputs() {
     });
   });
 }
+
+
+// Batch 3 student dashboard interactions
+
+document.addEventListener('DOMContentLoaded', () => {
+  initDashboardSidebar();
+  initDashboardFilters();
+  initStudentFormDemo();
+});
+
+function initDashboardSidebar() {
+  const toggles = document.querySelectorAll('[data-dashboard-toggle]');
+  const backdrop = document.querySelector('[data-dashboard-backdrop]');
+
+  function closeAll() {
+    document.querySelectorAll('.dashboard-sidebar.open').forEach((sidebar) => sidebar.classList.remove('open'));
+    if (backdrop) backdrop.classList.remove('open');
+  }
+
+  toggles.forEach((toggle) => {
+    const targetId = toggle.getAttribute('data-dashboard-toggle');
+    const sidebar = document.getElementById(targetId);
+    if (!sidebar) return;
+
+    toggle.addEventListener('click', () => {
+      sidebar.classList.toggle('open');
+      if (backdrop) backdrop.classList.toggle('open', sidebar.classList.contains('open'));
+    });
+  });
+
+  backdrop?.addEventListener('click', closeAll);
+  document.querySelectorAll('.dashboard-sidebar a').forEach((link) => {
+    link.addEventListener('click', closeAll);
+  });
+}
+
+function initDashboardFilters() {
+  const chips = document.querySelectorAll('[data-filter-chip]');
+  if (!chips.length) return;
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const group = chip.closest('[data-filter-group]');
+      if (!group) return;
+      group.querySelectorAll('[data-filter-chip]').forEach((item) => item.classList.remove('active'));
+      chip.classList.add('active');
+    });
+  });
+}
+
+function initStudentFormDemo() {
+  const forms = document.querySelectorAll('[data-student-form]');
+  forms.forEach((form) => {
+    const message = form.querySelector('[data-student-form-message]');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (message) message.classList.add('show');
+    });
+  });
+}
