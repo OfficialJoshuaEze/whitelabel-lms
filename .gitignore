@@ -1,0 +1,36 @@
+# Environment files
+.env
+.env.local
+
+# Dependencies
+node_modules/
+vendor/
+
+# Logs
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Uploads and user-generated files
+public/uploads/*
+assets/uploads/*
+uploads/*
+
+# Keep upload folders but ignore uploaded content
+!public/uploads/.gitkeep
+!assets/uploads/.gitkeep
+!uploads/.gitkeep
+
+# IDE files
+.vscode/
+.idea/
+
+# Build files
+dist/
+build/
+
+# Cache
+.cache/
+.tmp/
