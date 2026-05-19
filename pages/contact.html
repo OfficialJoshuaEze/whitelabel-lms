@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <title>Contact - Onlinetutor LMS</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="../index.html" class="logo" aria-label="Onlinetutor home">
+          <span class="logo-mark"><span></span><span></span></span>
+          <span>Onlinetutor.</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="" href="../index.html">Home</a>
+          <a class="" href="courses.html">Courses</a>
+          <a class="" href="about.html">About</a>
+          <a class="" href="pricing.html">Pricing</a>
+          <a class="active" href="contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="login.html" class="text-ink font-bold">Sign in</a>
+          <a href="register.html" class="btn btn-primary">Get Started</a>
+        </div>
+
+        <button class="menu-btn" data-menu-toggle="mobileMenu" aria-label="Open menu" aria-expanded="false">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-card">
+          <a class="" href="../index.html">Home</a>
+          <a class="" href="courses.html">Courses</a>
+          <a class="" href="about.html">About</a>
+          <a class="" href="pricing.html">Pricing</a>
+          <a class="active" href="contact.html">Contact</a>
+          <div class="mobile-actions">
+            <a href="login.html" class="btn btn-ghost">Sign in</a>
+            <a href="register.html" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="section-sm">
+      <div class="container">
+        <div class="page-hero-panel">
+          <span class="eyebrow">Contact us</span>
+          <h1 class="page-title">Let’s talk about your learning platform</h1>
+          <p class="page-copy">Send us a message about your academy, school, company or course platform. This form is currently frontend-only and will be connected to the backend later.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm" style="padding-top:0;">
+      <div class="container contact-grid">
+        <div class="card card-pad">
+          <h2 class="heading-font text-4xl text-ink m-0">Get in touch</h2>
+          <p class="mt-3">Use the contact details or send a direct message through the form.</p>
+          <div class="contact-method"><div class="contact-icon">@</div><div><strong class="text-ink">Email</strong><p class="m-0">hello@onlinetutor.test</p></div></div>
+          <div class="contact-method"><div class="contact-icon">☎</div><div><strong class="text-ink">Phone</strong><p class="m-0">+234 000 000 0000</p></div></div>
+          <div class="contact-method"><div class="contact-icon">⌂</div><div><strong class="text-ink">Office</strong><p class="m-0">Remote-first learning technology team</p></div></div>
+        </div>
+
+        <div class="card card-pad">
+          <form data-contact-form>
+            <div class="form-grid">
+              <input class="form-control" type="text" placeholder="Full name" required />
+              <input class="form-control" type="email" placeholder="Email address" required />
+              <input class="form-control" type="text" placeholder="Company / academy name" />
+              <select class="form-control"><option>What do you need?</option><option>White-label LMS</option><option>Course platform</option><option>Institution setup</option><option>General enquiry</option></select>
+              <textarea class="form-control full" placeholder="Tell us about your project" required></textarea>
+            </div>
+            <button class="btn btn-primary mt-5" type="submit">Send Message</button>
+            <div class="form-message" data-form-message>Message captured for demo. Backend submission will be added later.</div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="../index.html" class="logo">
+            <span class="logo-mark"><span></span><span></span></span>
+            <span>Onlinetutor.</span>
+          </a>
+          <p class="mt-4">A premium white-label LMS for academies, instructors, schools, companies and digital learning brands.</p>
+        </div>
+        <div>
+          <p class="footer-title">Platform</p>
+          <ul class="footer-links">
+            <li><a href="courses.html">Courses</a></li>
+            <li><a href="course-details.html">Course Details</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
+            <li><a href="contact.html">Book Demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Company</p>
+          <ul class="footer-links">
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Newsletter</p>
+          <p>Get product updates, learning insights and release notes.</p>
+          <form class="mt-4 grid gap-3">
+            <input class="form-control" type="email" placeholder="Enter your email" />
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Onlinetutor. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Help Center</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../assets/js/app.js"></script>
+</body>
+</html>

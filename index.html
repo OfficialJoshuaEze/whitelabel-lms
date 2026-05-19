@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800;900&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <title>Onlinetutor - White-label LMS</title>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="index.html" class="logo" aria-label="Onlinetutor home">
+          <span class="logo-mark"><span></span><span></span></span>
+          <span>Onlinetutor.</span>
+        </a>
+
+        <nav class="nav-links" aria-label="Main navigation">
+          <a class="active" href="index.html">Home</a>
+          <a class="" href="pages/courses.html">Courses</a>
+          <a class="" href="pages/about.html">About</a>
+          <a class="" href="pages/pricing.html">Pricing</a>
+          <a class="" href="pages/contact.html">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="pages/login.html" class="text-ink font-bold">Sign in</a>
+          <a href="pages/register.html" class="btn btn-primary">Get Started</a>
+        </div>
+
+        <button class="menu-btn" data-menu-toggle="mobileMenu" aria-label="Open menu" aria-expanded="false">
+          <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-card">
+          <a class="active" href="index.html">Home</a>
+          <a class="" href="pages/courses.html">Courses</a>
+          <a class="" href="pages/about.html">About</a>
+          <a class="" href="pages/pricing.html">Pricing</a>
+          <a class="" href="pages/contact.html">Contact</a>
+          <div class="mobile-actions">
+            <a href="pages/login.html" class="btn btn-ghost">Sign in</a>
+            <a href="pages/register.html" class="btn btn-primary">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <div class="hero-panel">
+          <div class="hero-grid">
+            <div>
+              <span class="eyebrow">Modern LMS Platform</span>
+              <h1>Teaching in the Internet age means we must teach <span class="text-gradient">tomorrow’s skills today</span></h1>
+              <p class="hero-copy">Deliver engaging online learning with a beautiful platform for students, instructors and institutions. Launch courses, track progress and grow your academy with ease.</p>
+              <div class="hero-actions">
+                <a href="pages/register.html" class="btn btn-accent">Join as Instructor</a>
+                <a href="pages/courses.html" class="btn btn-primary">Explore Courses</a>
+              </div>
+              <div class="stats-row">
+                <span><i class="stat-dot green"></i>1200+ Active learners</span>
+                <span><i class="stat-dot"></i>250+ Expert-led courses</span>
+                <span><i class="stat-dot orange"></i>White-label ready</span>
+              </div>
+            </div>
+
+            <div class="dashboard-preview">
+              <div class="preview-card">
+                <div class="preview-inner">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <p class="m-0">Student Progress</p>
+                      <strong class="text-ink text-4xl">82%</strong>
+                    </div>
+                    <div class="feature-icon">LMS</div>
+                  </div>
+                  <div class="progress-item"><div class="progress-top"><span>UI/UX Design</span><strong>90%</strong></div><div class="progress-track"><div class="progress-fill" style="width:90%"></div></div></div>
+                  <div class="progress-item"><div class="progress-top"><span>Python Basics</span><strong>75%</strong></div><div class="progress-track"><div class="progress-fill orange" style="width:75%"></div></div></div>
+                  <div class="progress-item"><div class="progress-top"><span>Leadership</span><strong>68%</strong></div><div class="progress-track"><div class="progress-fill" style="width:68%"></div></div></div>
+                  <div class="mini-grid"><div class="mini-stat"><span>Lessons</span><strong>124</strong></div><div class="mini-stat"><span>Certificates</span><strong>08</strong></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="logo-row">
+          <div class="logo-pill">HubSpot</div><div class="logo-pill">GitLab</div><div class="logo-pill">Loom</div><div class="logo-pill">LiveChat</div><div class="logo-pill">Ahrefs</div><div class="logo-pill">Notion</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">Explore learning paths</span>
+            <h2>Our Most <span class="text-primary">Popular Courses</span></h2>
+            <p>Let students join world-class courses taught by top instructors and institutions.</p>
+          </div>
+          <a href="pages/courses.html" class="btn btn-ghost">Explore Courses ↗</a>
+        </div>
+        <div class="grid-3">
+          <article class="card course-card" data-course-card data-title="machine learning regression classification python ai" data-category="programming" data-level="advanced">
+            <div class="course-media"></div>
+            <div class="course-body">
+              <div class="card-meta"><span>● 25 Lessons</span><span class="stars">★★★★★</span></div>
+              <h3 class="course-title">Supervised Machine Learning: Regression and Classification</h3>
+              <p class="course-desc">Learn core machine learning concepts with practical examples and guided projects.</p>
+              <div class="card-footer"><span class="badge programming">Programming</span><strong class="text-ink">Advanced</strong></div>
+              <a href="pages/course-details.html" class="btn btn-primary btn-block mt-6">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card" data-course-card data-title="python programming everybody beginner coding" data-category="programming" data-level="beginner">
+            <div class="course-media alt-1"></div>
+            <div class="course-body">
+              <div class="card-meta"><span>● 16 Lessons</span><span class="stars">★★★★★</span></div>
+              <h3 class="course-title">Programming for Everybody: Getting Started with Python</h3>
+              <p class="course-desc">Start coding from scratch and understand the basics of software development.</p>
+              <div class="card-footer"><span class="badge programming">Programming</span><strong class="text-ink">Beginner</strong></div>
+              <a href="pages/course-details.html" class="btn btn-primary btn-block mt-6">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card" data-course-card data-title="leading teams developing leader management" data-category="leadership" data-level="intermediate">
+            <div class="course-media alt-3"></div>
+            <div class="course-body">
+              <div class="card-meta"><span>● 38 Lessons</span><span class="stars">★★★★★</span></div>
+              <h3 class="course-title">Leading Teams: Developing as a Modern Leader</h3>
+              <p class="course-desc">Build leadership confidence, manage people well and lead high-performing teams.</p>
+              <div class="card-footer"><span class="badge leadership">Leadership</span><strong class="text-ink">Intermediate</strong></div>
+              <a href="pages/course-details.html" class="btn btn-primary btn-block mt-6">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card" data-course-card data-title="ui ux design product interface figma" data-category="design" data-level="beginner">
+            <div class="course-media alt-4"></div>
+            <div class="course-body">
+              <div class="card-meta"><span>● 30 Lessons</span><span class="stars">★★★★★</span></div>
+              <h3 class="course-title">UI/UX Design Fundamentals for Digital Products</h3>
+              <p class="course-desc">Learn how to design clean, useful and beautiful interfaces for web and mobile apps.</p>
+              <div class="card-footer"><span class="badge design">Design</span><strong class="text-ink">Beginner</strong></div>
+              <a href="pages/course-details.html" class="btn btn-primary btn-block mt-6">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card" data-course-card data-title="digital marketing growth strategy content ads" data-category="marketing" data-level="intermediate">
+            <div class="course-media alt-2"></div>
+            <div class="course-body">
+              <div class="card-meta"><span>● 42 Lessons</span><span class="stars">★★★★★</span></div>
+              <h3 class="course-title">Digital Marketing and Growth Strategy</h3>
+              <p class="course-desc">Understand content, ads, funnels and growth systems for online businesses.</p>
+              <div class="card-footer"><span class="badge marketing">Marketing</span><strong class="text-ink">Intermediate</strong></div>
+              <a href="pages/course-details.html" class="btn btn-primary btn-block mt-6">View Course</a>
+            </div>
+          </article>
+          <article class="card course-card" data-course-card data-title="english language communication speaking writing" data-category="language" data-level="beginner">
+            <div class="course-media alt-5"></div>
+            <div class="course-body">
+              <div class="card-meta"><span>● 92 Lessons</span><span class="stars">★★★★★</span></div>
+              <h3 class="course-title">Improve Your English Communication Skills</h3>
+              <p class="course-desc">Speak, write and communicate clearly in academic and professional settings.</p>
+              <div class="card-footer"><span class="badge language">Language</span><strong class="text-ink">Beginner</strong></div>
+              <a href="pages/course-details.html" class="btn btn-primary btn-block mt-6">View Course</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="background:#fff;border-block:1px solid var(--border);">
+      <div class="container">
+        <div class="section-heading" style="text-align:center;display:block;max-width:760px;margin-inline:auto;margin-bottom:36px;">
+          <span class="eyebrow">Why choose this LMS</span>
+          <h2>Built for modern digital learning</h2>
+          <p>Everything you need to create, manage and scale a beautiful online learning experience.</p>
+        </div>
+        <div class="grid-4">
+          <div class="card card-pad feature-card"><div class="feature-icon">01</div><h3>Course Creation</h3><p>Create lessons, modules, quizzes, files and live classes from one clean interface.</p></div>
+          <div class="card card-pad feature-card"><div class="feature-icon orange">02</div><h3>Student Progress</h3><p>Track enrolment, lesson completion, certificates and learning performance.</p></div>
+          <div class="card card-pad feature-card"><div class="feature-icon">03</div><h3>White-label Branding</h3><p>Change logo, colors, domain and content so institutions can make the platform their own.</p></div>
+          <div class="card card-pad feature-card"><div class="feature-icon orange">04</div><h3>Role-based Access</h3><p>Support students, instructors, admins and institutional managers with clear permissions.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container two-col">
+        <div class="metric-panel"><div class="metric-card"><div class="grid grid-cols-2 gap-4"><div class="mini-stat"><span>Courses Published</span><strong>36</strong></div><div class="mini-stat"><span>Students</span><strong>18.4k</strong></div><div class="mini-stat" style="grid-column:1/-1"><span>Instructor Revenue</span><strong>$12,860</strong><div class="progress-track soft mt-4"><div class="progress-fill" style="width:78%"></div></div></div></div></div></div>
+        <div>
+          <span class="eyebrow">For instructors and institutions</span>
+          <h2 class="page-title" style="font-size:clamp(32px,4vw,48px);">Teach, manage and grow your academy from one platform</h2>
+          <p class="page-copy">Whether you are an individual expert, training firm, school or university, this LMS gives you the tools to launch courses beautifully and manage learners professionally.</p>
+          <ul class="check-list">
+            <li>Upload videos, PDFs, assignments and learning resources</li>
+            <li>Monitor student engagement, completion rates and outcomes</li>
+            <li>Customize the experience with white-label flexibility</li>
+          </ul>
+          <a href="pages/register.html" class="btn btn-primary mt-8">Become an Instructor</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm">
+      <div class="container">
+        <div class="cta-panel">
+          <div class="cta-grid">
+            <div><h2>Ready to launch your next learning platform?</h2><p>Build a premium LMS experience for students, instructors and institutions with a design system that scales.</p></div>
+            <div class="flex gap-3 flex-wrap"><a href="pages/register.html" class="btn" style="background:#fff;color:var(--primary);">Start Free</a><a href="pages/contact.html" class="btn" style="border-color:rgba(255,255,255,.35);color:#fff;">Book Demo</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a href="index.html" class="logo">
+            <span class="logo-mark"><span></span><span></span></span>
+            <span>Onlinetutor.</span>
+          </a>
+          <p class="mt-4">A premium white-label LMS for academies, instructors, schools, companies and digital learning brands.</p>
+        </div>
+        <div>
+          <p class="footer-title">Platform</p>
+          <ul class="footer-links">
+            <li><a href="pages/courses.html">Courses</a></li>
+            <li><a href="pages/course-details.html">Course Details</a></li>
+            <li><a href="pages/pricing.html">Pricing</a></li>
+            <li><a href="pages/contact.html">Book Demo</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Company</p>
+          <ul class="footer-links">
+            <li><a href="pages/about.html">About</a></li>
+            <li><a href="pages/contact.html">Contact</a></li>
+            <li><a href="#">Privacy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-title">Newsletter</p>
+          <p>Get product updates, learning insights and release notes.</p>
+          <form class="mt-4 grid gap-3">
+            <input class="form-control" type="email" placeholder="Enter your email" />
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </form>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Onlinetutor. All rights reserved.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms</a>
+          <a href="#">Help Center</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
