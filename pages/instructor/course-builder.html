@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <title>Course Builder - Instructor Dashboard</title>
+</head>
+<body class="dashboard-body">
+  <div class="overlay-backdrop" data-dashboard-backdrop></div>
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="instructorSidebar">
+      <a class="logo" href="../../index.html" aria-label="Onlinetutor home">
+        <span class="logo-mark"><span></span><span></span></span>
+        <span>Onlinetutor.</span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Instructor navigation">
+        <div class="sidebar-section-label">Instructor Menu</div>
+        <a href="dashboard.html" class=""><span class="nav-icon">🏠</span><span>Dashboard</span></a>
+<a href="courses.html" class=""><span class="nav-icon">📚</span><span>My Courses</span></a>
+<a href="create-course.html" class=""><span class="nav-icon">➕</span><span>Create Course</span></a>
+<a href="course-builder.html" class="active"><span class="nav-icon">🧱</span><span>Course Builder</span></a>
+<a href="students.html" class=""><span class="nav-icon">👥</span><span>Students</span></a>
+<a href="earnings.html" class=""><span class="nav-icon">💳</span><span>Earnings</span></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Instructor score</strong>
+        <p>Your course quality and student engagement score is improving.</p>
+        <div class="sidebar-progress"><span style="width:84%"></span></div>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="dashboard-menu-btn" type="button" data-dashboard-toggle="instructorSidebar" aria-label="Open instructor menu">☰</button>
+        <div class="dashboard-search"><span>⌕</span><input type="search" placeholder="Search courses, students or lessons..." /></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <a class="icon-btn" href="create-course.html" aria-label="Create course">＋</a>
+          <a class="user-pill" href="dashboard.html">
+            <span class="avatar">JE</span>
+            <div><strong class="text-ink">Joshua Eze</strong><br><small>Instructor</small></div>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        
+<div class="page-heading">
+  <div>
+    <span class="eyebrow">Course builder</span>
+    <h1>Build your course curriculum</h1>
+    <p>Organize modules, add lessons, upload resources and prepare assessments.</p>
+  </div>
+  <div class="quick-actions"><button class="btn btn-ghost">Preview</button><button class="btn btn-primary">Publish Course</button></div>
+</div>
+
+<section class="builder-layout">
+  <aside class="builder-panel">
+    <div class="dashboard-section-title"><h2>Modules</h2><button class="small-btn primary">Add Module</button></div>
+    <div class="module-stack">
+      <article class="module-card active" data-module-card>
+        <h3>Module 1: Getting Started</h3>
+        <div class="module-meta"><span>4 lessons</span><span>42 mins</span><span>Published</span></div>
+      </article>
+      <article class="module-card" data-module-card>
+        <h3>Module 2: Design Principles</h3>
+        <div class="module-meta"><span>6 lessons</span><span>1h 25m</span><span>Draft</span></div>
+      </article>
+      <article class="module-card" data-module-card>
+        <h3>Module 3: Practical Project</h3>
+        <div class="module-meta"><span>3 lessons</span><span>55 mins</span><span>Draft</span></div>
+      </article>
+    </div>
+  </aside>
+
+  <div class="builder-panel">
+    <div class="dashboard-section-title"><h2>Lessons in selected module</h2><button class="small-btn primary">Add Lesson</button></div>
+    <div class="lesson-stack">
+      <article class="lesson-builder-card"><span class="drag-handle">⋮⋮</span><div><h3>Welcome and Course Overview</h3><div class="module-meta"><span>Video</span><span>08 mins</span><span>Free preview</span></div></div><button class="small-btn soft">Edit</button></article>
+      <article class="lesson-builder-card"><span class="drag-handle">⋮⋮</span><div><h3>How to Use the Learning Dashboard</h3><div class="module-meta"><span>Video</span><span>12 mins</span><span>Published</span></div></div><button class="small-btn soft">Edit</button></article>
+      <article class="lesson-builder-card"><span class="drag-handle">⋮⋮</span><div><h3>Resource Pack: Starter Files</h3><div class="module-meta"><span>PDF</span><span>2 files</span><span>Published</span></div></div><button class="small-btn soft">Edit</button></article>
+      <article class="lesson-builder-card"><span class="drag-handle">⋮⋮</span><div><h3>Module Quiz</h3><div class="module-meta"><span>Quiz</span><span>10 questions</span><span>Draft</span></div></div><button class="small-btn soft">Edit</button></article>
+    </div>
+
+    <form class="profile-panel" style="margin-top:24px" data-instructor-form>
+      <div class="dashboard-section-title"><h2>Quick lesson editor</h2></div>
+      <div class="profile-form-grid">
+        <div class="form-group full"><label>Lesson title</label><input type="text" placeholder="Enter lesson title" /></div>
+        <div class="form-group"><label>Lesson type</label><select><option>Video</option><option>PDF</option><option>Quiz</option><option>Assignment</option></select></div>
+        <div class="form-group"><label>Duration</label><input type="text" placeholder="12 mins" /></div>
+        <div class="form-group full"><label>Lesson notes</label><textarea placeholder="Add lesson notes, summary or resources..."></textarea></div>
+      </div>
+      <div class="quick-actions" style="margin-top:22px"><button class="btn btn-primary" type="submit">Save Lesson</button><button class="btn btn-ghost" type="button">Upload Resource</button></div>
+      <div class="form-message-inline" data-instructor-form-message>Lesson saved successfully.</div>
+    </form>
+  </div>
+</section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

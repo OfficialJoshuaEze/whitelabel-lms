@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <title>Courses - Instructor Dashboard</title>
+</head>
+<body class="dashboard-body">
+  <div class="overlay-backdrop" data-dashboard-backdrop></div>
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="instructorSidebar">
+      <a class="logo" href="../../index.html" aria-label="Onlinetutor home">
+        <span class="logo-mark"><span></span><span></span></span>
+        <span>Onlinetutor.</span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Instructor navigation">
+        <div class="sidebar-section-label">Instructor Menu</div>
+        <a href="dashboard.html" class=""><span class="nav-icon">🏠</span><span>Dashboard</span></a>
+<a href="courses.html" class="active"><span class="nav-icon">📚</span><span>My Courses</span></a>
+<a href="create-course.html" class=""><span class="nav-icon">➕</span><span>Create Course</span></a>
+<a href="course-builder.html" class=""><span class="nav-icon">🧱</span><span>Course Builder</span></a>
+<a href="students.html" class=""><span class="nav-icon">👥</span><span>Students</span></a>
+<a href="earnings.html" class=""><span class="nav-icon">💳</span><span>Earnings</span></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Instructor score</strong>
+        <p>Your course quality and student engagement score is improving.</p>
+        <div class="sidebar-progress"><span style="width:84%"></span></div>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="dashboard-menu-btn" type="button" data-dashboard-toggle="instructorSidebar" aria-label="Open instructor menu">☰</button>
+        <div class="dashboard-search"><span>⌕</span><input type="search" placeholder="Search courses, students or lessons..." /></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <a class="icon-btn" href="create-course.html" aria-label="Create course">＋</a>
+          <a class="user-pill" href="dashboard.html">
+            <span class="avatar">JE</span>
+            <div><strong class="text-ink">Joshua Eze</strong><br><small>Instructor</small></div>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        
+<div class="page-heading">
+  <div>
+    <span class="eyebrow">Course management</span>
+    <h1>Manage your courses</h1>
+    <p>Review published courses, continue drafts and open the builder for updates.</p>
+  </div>
+  <a class="btn btn-primary" href="create-course.html">Create Course</a>
+</div>
+
+<div class="filter-row" data-filter-group>
+  <button class="filter-chip active" data-filter-chip>All Courses</button>
+  <button class="filter-chip" data-filter-chip>Published</button>
+  <button class="filter-chip" data-filter-chip>Drafts</button>
+  <button class="filter-chip" data-filter-chip>Archived</button>
+</div>
+
+<section class="course-management-grid">
+  <article class="management-card">
+    <div class="course-thumb design"></div>
+    <div class="badge-row"><span class="status-badge green">Published</span><span class="status-badge">Design</span></div>
+    <h3>UI/UX Design Fundamentals for Digital Products</h3>
+    <div class="course-card-meta"><span>30 lessons</span><span>1,280 students</span><span>92% rating</span></div>
+    <div class="progress-line"><span style="width:86%"></span></div>
+    <div class="management-actions"><a class="small-btn primary" href="course-builder.html">Edit</a><button class="small-btn">Analytics</button><button class="small-btn soft">Preview</button></div>
+  </article>
+  <article class="management-card">
+    <div class="course-thumb code"></div>
+    <div class="badge-row"><span class="status-badge green">Published</span><span class="status-badge">Programming</span></div>
+    <h3>Programming for Everybody: Python Basics</h3>
+    <div class="course-card-meta"><span>16 lessons</span><span>846 students</span><span>89% rating</span></div>
+    <div class="progress-line"><span style="width:74%"></span></div>
+    <div class="management-actions"><a class="small-btn primary" href="course-builder.html">Edit</a><button class="small-btn">Analytics</button><button class="small-btn soft">Preview</button></div>
+  </article>
+  <article class="management-card">
+    <div class="course-thumb lead"></div>
+    <div class="badge-row"><span class="status-badge orange">Draft</span><span class="status-badge">Leadership</span></div>
+    <h3>Leading Teams: Developing as a Modern Leader</h3>
+    <div class="course-card-meta"><span>8 lessons ready</span><span>Needs pricing</span><span>Checklist 64%</span></div>
+    <div class="progress-line"><span style="width:64%"></span></div>
+    <div class="management-actions"><a class="small-btn primary" href="course-builder.html">Continue</a><button class="small-btn">Checklist</button><button class="small-btn soft">Preview</button></div>
+  </article>
+  <article class="management-card">
+    <div class="course-thumb marketing"></div>
+    <div class="badge-row"><span class="status-badge green">Published</span><span class="status-badge orange">Marketing</span></div>
+    <h3>Digital Marketing and Growth Strategy</h3>
+    <div class="course-card-meta"><span>42 lessons</span><span>360 students</span><span>87% rating</span></div>
+    <div class="progress-line"><span style="width:62%"></span></div>
+    <div class="management-actions"><a class="small-btn primary" href="course-builder.html">Edit</a><button class="small-btn">Analytics</button><button class="small-btn soft">Preview</button></div>
+  </article>
+  <article class="management-card">
+    <div class="course-thumb"></div>
+    <div class="badge-row"><span class="status-badge orange">Draft</span><span class="status-badge">Business</span></div>
+    <h3>Building a Personal Knowledge System</h3>
+    <div class="course-card-meta"><span>4 lessons ready</span><span>Draft outline</span><span>Checklist 38%</span></div>
+    <div class="progress-line"><span style="width:38%"></span></div>
+    <div class="management-actions"><a class="small-btn primary" href="course-builder.html">Continue</a><button class="small-btn">Checklist</button><button class="small-btn soft">Preview</button></div>
+  </article>
+  <article class="management-card">
+    <div class="course-thumb design"></div>
+    <div class="badge-row"><span class="status-badge">Archived</span><span class="status-badge">Design</span></div>
+    <h3>Design Thinking for Beginners</h3>
+    <div class="course-card-meta"><span>22 lessons</span><span>Archived</span><span>Historical data</span></div>
+    <div class="progress-line"><span style="width:100%"></span></div>
+    <div class="management-actions"><button class="small-btn primary">Restore</button><button class="small-btn">Report</button></div>
+  </article>
+</section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

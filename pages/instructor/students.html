@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../assets/css/style.css" />
+  <title>Students - Instructor Dashboard</title>
+</head>
+<body class="dashboard-body">
+  <div class="overlay-backdrop" data-dashboard-backdrop></div>
+  <div class="dashboard-layout">
+    <aside class="dashboard-sidebar" id="instructorSidebar">
+      <a class="logo" href="../../index.html" aria-label="Onlinetutor home">
+        <span class="logo-mark"><span></span><span></span></span>
+        <span>Onlinetutor.</span>
+      </a>
+
+      <nav class="sidebar-nav" aria-label="Instructor navigation">
+        <div class="sidebar-section-label">Instructor Menu</div>
+        <a href="dashboard.html" class=""><span class="nav-icon">🏠</span><span>Dashboard</span></a>
+<a href="courses.html" class=""><span class="nav-icon">📚</span><span>My Courses</span></a>
+<a href="create-course.html" class=""><span class="nav-icon">➕</span><span>Create Course</span></a>
+<a href="course-builder.html" class=""><span class="nav-icon">🧱</span><span>Course Builder</span></a>
+<a href="students.html" class="active"><span class="nav-icon">👥</span><span>Students</span></a>
+<a href="earnings.html" class=""><span class="nav-icon">💳</span><span>Earnings</span></a>
+      </nav>
+
+      <div class="sidebar-card">
+        <strong>Instructor score</strong>
+        <p>Your course quality and student engagement score is improving.</p>
+        <div class="sidebar-progress"><span style="width:84%"></span></div>
+      </div>
+    </aside>
+
+    <div class="dashboard-main">
+      <header class="dashboard-topbar">
+        <button class="dashboard-menu-btn" type="button" data-dashboard-toggle="instructorSidebar" aria-label="Open instructor menu">☰</button>
+        <div class="dashboard-search"><span>⌕</span><input type="search" placeholder="Search courses, students or lessons..." /></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" type="button" aria-label="Notifications">🔔</button>
+          <a class="icon-btn" href="create-course.html" aria-label="Create course">＋</a>
+          <a class="user-pill" href="dashboard.html">
+            <span class="avatar">JE</span>
+            <div><strong class="text-ink">Joshua Eze</strong><br><small>Instructor</small></div>
+          </a>
+        </div>
+      </header>
+      <main class="dashboard-content">
+        
+<div class="page-heading">
+  <div>
+    <span class="eyebrow">Student management</span>
+    <h1>Track your learners</h1>
+    <p>Monitor enrolments, engagement, progress and course completion across your student base.</p>
+  </div>
+  <button class="btn btn-primary">Export CSV</button>
+</div>
+
+<section class="stat-grid">
+  <div class="stat-card"><p>Active Students</p><strong>2,486</strong><span>+186 this month</span></div>
+  <div class="stat-card"><p>At Risk</p><strong>42</strong><span style="color:var(--accent-dark)">Need follow-up</span></div>
+  <div class="stat-card"><p>Completed</p><strong>1,328</strong><span>53% completion</span></div>
+  <div class="stat-card"><p>Avg. Score</p><strong>84%</strong><span>Great performance</span></div>
+</section>
+
+<section class="data-table-card">
+  <div class="dashboard-section-title"><h2>Recent students</h2><button class="small-btn primary">Message Group</button></div>
+  <div class="table-responsive">
+    <table class="data-table">
+      <thead><tr><th>Student</th><th>Course</th><th>Progress</th><th>Status</th><th>Last Active</th><th>Action</th></tr></thead>
+      <tbody>
+        <tr><td><div class="table-user"><span class="avatar">AM</span><div><strong class="text-ink">Amaka Martins</strong><br><small>amaka@example.com</small></div></div></td><td>UI/UX Design</td><td>86%</td><td><span class="status-badge green">Active</span></td><td>Today</td><td><div class="table-actions"><button class="small-btn soft">View</button><button class="small-btn">Message</button></div></td></tr>
+        <tr><td><div class="table-user"><span class="avatar">DK</span><div><strong class="text-ink">David King</strong><br><small>david@example.com</small></div></div></td><td>Python Basics</td><td>74%</td><td><span class="status-badge green">Active</span></td><td>Yesterday</td><td><div class="table-actions"><button class="small-btn soft">View</button><button class="small-btn">Message</button></div></td></tr>
+        <tr><td><div class="table-user"><span class="avatar">SO</span><div><strong class="text-ink">Sarah Okafor</strong><br><small>sarah@example.com</small></div></div></td><td>Marketing Strategy</td><td>31%</td><td><span class="status-badge orange">At Risk</span></td><td>5 days ago</td><td><div class="table-actions"><button class="small-btn soft">View</button><button class="small-btn">Message</button></div></td></tr>
+        <tr><td><div class="table-user"><span class="avatar">TJ</span><div><strong class="text-ink">Tunde James</strong><br><small>tunde@example.com</small></div></div></td><td>Leadership</td><td>100%</td><td><span class="status-badge green">Completed</span></td><td>Today</td><td><div class="table-actions"><button class="small-btn soft">View</button><button class="small-btn">Certificate</button></div></td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="../../assets/js/app.js"></script>
+</body>
+</html>

@@ -252,3 +252,34 @@ function initStudentFormDemo() {
     });
   });
 }
+
+
+// Batch 4 instructor dashboard interactions
+
+document.addEventListener('DOMContentLoaded', () => {
+  initInstructorFormDemo();
+  initBuilderModuleSelect();
+});
+
+function initInstructorFormDemo() {
+  const forms = document.querySelectorAll('[data-instructor-form]');
+  forms.forEach((form) => {
+    const message = form.querySelector('[data-instructor-form-message]');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (message) message.classList.add('show');
+    });
+  });
+}
+
+function initBuilderModuleSelect() {
+  const moduleCards = document.querySelectorAll('[data-module-card]');
+  if (!moduleCards.length) return;
+
+  moduleCards.forEach((card) => {
+    card.addEventListener('click', () => {
+      moduleCards.forEach((item) => item.classList.remove('active'));
+      card.classList.add('active');
+    });
+  });
+}
